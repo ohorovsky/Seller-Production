@@ -419,15 +419,12 @@ and (min-width:480px)
     
     
 }
-
 /********************************************************************************************/
 /***************************  960px width < DESKTOP SCREENS     **********************/
 /***********************************font-size: 20px****************************************/
 
 
-@media screen
-and (min-width: 961px)
-{
+@media only screen and (min-width : 961px) {
     nav{
         display:block;
         position: fixed;
@@ -473,7 +470,7 @@ and (min-width: 961px)
         display: inline;
         position: absolute;
         top:0;
-        left:30%;
+        left:20%;
         
         
         list-style: none;
@@ -486,7 +483,7 @@ and (min-width: 961px)
         display: inline;
         position: absolute;
         top:0;
-        right:25%;
+        right:15%;
         
         list-style: none;
         line-height: 150px;
@@ -509,11 +506,11 @@ and (min-width: 961px)
         display: none;
     }
     header{
-        height:70vh;
+        height:80vh;
     }
     .header-overlay{
         
-        height:70vh;
+        height:80vh;
         width:70%;
         left:50%;
         transform: translate(-50%);
@@ -525,7 +522,7 @@ and (min-width: 961px)
         display:;
         text-align: center;
         top:50%;
-        font-size: 70px;
+        font-size: 50px;
         color:#fff;
     }
     
@@ -537,21 +534,26 @@ and (min-width: 961px)
         position: relative;
         right:0;
     }
-    
+    .play{
+        left:7%;
+    }
+    .buy{
+        right:7%;
+    }
     #main{
-        width:60%;
+        width:80%;
         margin:0 auto;
         padding:100px 0;
         height:1000px;
     }
     .bio{
         float:left;
-        width:480px;
+        width:420px;
         
     }
     .studio{
         float:right;
-        width:480px;
+        width:420px;
     }
     /* Feature*/
     #music{
@@ -566,6 +568,56 @@ and (min-width: 961px)
         max-width: 60%;
         margin:100px auto;
         
+    }
+    }
+
+/********************************************************************************************/
+/***************************  1681px width < LARGE DESKTOP SCREENS     **********************/
+/***********************************font-size: 20px****************************************/
+
+
+@media screen
+and (min-width: 1681px)
+{
+    
+    .navbar-left{
+        
+        left:30%;
+        
+    }
+    
+    .navbar-right{
+        
+        right:25%;
+        
+    }
+    header{
+        height:70vh;
+    }
+    .header-overlay{
+        
+        height:70vh;
+        width:70%;
+        
+        
+    }
+    .header-overlay h1{
+        
+        font-size: 70px;
+        
+    }
+    #main{
+        width:60%;
+        
+    }
+    .bio{
+        
+        width:480px;
+        
+    }
+    .studio{
+        
+        width:480px;
     }
 }
 
