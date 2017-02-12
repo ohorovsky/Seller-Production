@@ -527,7 +527,7 @@ footer {
         display: inline;
         position: absolute;
         top: 0;
-        left: 20%;
+        left: 15%;
         list-style: none;
         line-height: 150px;
     }
@@ -538,7 +538,7 @@ footer {
         display: inline;
         position: absolute;
         top: 0;
-        right: 15%;
+        right: 10%;
         list-style: none;
         line-height: 150px;
     }
