@@ -559,11 +559,11 @@ footer {
         display: none;
     }
     header {
-        height: 80vh;
+        height: 100vh;
         background-attachment: fixed;
     }
     .header-overlay {
-        height: 80vh;
+        height: 100vh;
         width: 70%;
         left: 50%;
         transform: translate(-50%);
