@@ -39,7 +39,7 @@ body {
 /* HEADER AND LAYER ON HEADER */
 
 header {
-    min-height: 100vh;
+    height: 100vh;
     background-image: url("../img/mix.jpg");
     background-position: 50% 50%;
     background-size: cover;
@@ -61,7 +61,7 @@ header {
     position: relative;
     text-align: center;
     color: #fff;
-    top:40%;
+    top:30%;
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 5px;
