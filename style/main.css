@@ -573,7 +573,7 @@ footer {
         position: absolute;
         width: 100%;
         text-align: center;
-        bottom:250px;
+        top:300px;
         font-size: 40px;
         color: #fff;
     }
