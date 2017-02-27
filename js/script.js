@@ -1,4 +1,9 @@
 $(document).ready(function () {
+
+    //fade in down
+
+    $('body').addClass('fade-in-up');
+
     var didScroll;
     // on scroll, let the interval function know the user has scrolled
     $(window).scroll(function (event) {
@@ -83,23 +88,21 @@ $(document).ready(function () {
 
     $(window).scroll(function () {
         var wScroll = $(this).scrollTop();
+        if (wScroll / 400 <= 1) {
+            $(".fade-left").css({
+                'left': '-' + wScroll / 3 + 'px',
+                'opacity': 1 - (wScroll / 400),
+            });
 
-        $(".fade-left").css({
-            'left': '-' + wScroll / 3 + 'px',
-            'opacity': 1 - (wScroll / 400),
-        })
+            $(".fade-right").css({
+                'right': '-' + wScroll / 3 + 'px',
+                'opacity': 1 - (wScroll / 400),
 
-        $(".fade-right").css({
-            'right': '-' + wScroll / 3 + 'px',
-            'opacity': 1 - (wScroll / 400),
+            });
+        }
 
-        })
+        
 
-        $(".layer .portfolioBtn").css({
-            'transform': 'translate(0px, -' + wScroll / 11 + '%)',
-            'opacity': 1 - (wScroll / 600),
-
-        })
 
 
     });
@@ -143,7 +146,7 @@ $(document).ready(function () {
 
         if (isEmail($("#email").val()) == false) {
 
-            $(".danger").fadeIn();
+            $(".danger").fadeIn().css('display', 'inline-block');
 
         } else {
 

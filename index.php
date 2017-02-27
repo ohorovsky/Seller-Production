@@ -18,7 +18,7 @@ $error = "";
         
         if ($error != ""){
             
-            $error = '<div class="alert alert-danger" role="alert">
+            $error = '<div class="alert-danger" role="alert">
                             <strong>Oh no!</strong> Check your email adress and try submitting again.</div>';
             
         } else{
@@ -29,8 +29,7 @@ $error = "";
             $headers = "From: ".$_POST['email'];
             
             if(mail($emailTo, $name, $comment, $headers)){
-                
-                $successMessage = '<div class="alert alert-success" role="alert">
+                $successMessage = '<div class="alert-success" role="alert">
                             Your message has been sent! I\'ll get in touch ASAP!</div>';
                 
             }
@@ -84,11 +83,19 @@ $error = "";
 
         <div class="menu">
             <div class="menuItems">
+               <img class="mobile-logo" src="img/logo.png">
                 <a href="#header"><h1>HOME</h1></a>
                 <a href="#main"><h1>BIO</h1></a>
                 <a href="#music"><h1>MUSIC</h1></a>
                 <a href="#footer"><h1>CONTACT</h1></a>
+                <div class="footerIcons">
+                    <a class="fb" href="https://www.facebook.com/sellerproduction/?fref=ts" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                    <a class="insta" href="https://www.instagram.com/peter.seller/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a class="twitter" href="https://twitter.com/seller6Peter" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                    <a class="linked" href="https://www.linkedin.com/in/peter-seller-68137511a" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                </div>
             </div>
+
         </div>
         <header id="header">
 
@@ -100,10 +107,10 @@ $error = "";
                 <div class="lineBreak"></div>
                 <p class="down">Click to Play</p>
                 <div class="audio-icons">
-                    <a class="icon1" href="" target="_blank"><img src="img/bandcamp.png"></a>
-                    <a class="icon2" href="" target="_blank"><img src="img/reverbnation.png"></a>
-                    <a class="icon3" href="" target="_blank"><img src="img/soundcloud.jpg"></a>
-                    <a class="icon4" href="" target="_blank"><img src="img/youtube.png"></a>
+                    <a class="icon1" href="https://peterseller.bandcamp.com/" target="_blank"><img src="img/bandcamp.png"></a>
+                    <a class="icon2" href="https://www.reverbnation.com/peterseller?profile_view_source=header_icon_nav" target="_blank"><img src="img/reverbnation.png"></a>
+                    <a class="icon3" href="https://soundcloud.com/user-445179541" target="_blank"><img src="img/soundcloud.jpg"></a>
+                    <a class="icon4" href="https://www.youtube.com/channel/UCaQ8xGDQyJj-mK0M506-P1A" target="_blank"><img src="img/youtube.png"></a>
                     <a class="iconBack" href="" onclick="return false;"><i class="fa fa-times" aria-hidden="true"></i></a>
                 </div>
             </div>
@@ -112,9 +119,11 @@ $error = "";
                 <div class="lineBreak"></div>
                 <p class="down">Click to Buy</p>
                 <div class="buy-icons">
-                    <a href=""><img src=""></a>
-                    <a href=""><img src=""></a>
-                    <a href=""><img src=""></a>
+                    <a class="icon1" href="https://peterseller.bandcamp.com/" target="_blank"><img src="img/bandcamp.png"></a>
+                    <a class="icon2" href="https://itunes.apple.com/sk/artist/peter-seller/id270702154" target="_blank"><img src="img/itunes.jpg"></a>
+                    <a class="icon3" href="https://www.amazon.com/s/ref=nb_sb_ss_rsis_1_0?url=search-alias%3Ddigital-music&field-keywords=peter+seller+get+busy&sprefix=%2Caps%2C741" target="_blank"><img src="img/Amazon.jpg"></a>
+                    <a class="icon4" href="https://play.google.com/store/music/artist/Peter_Seller?id=Aitmyhf4y5n5fr5nw7msjoz3ubm" target="_blank"><img src="img/google-play-square.jpg"></a>
+                    <a class="iconBack" href="" onclick="return false;"><i class="fa fa-times" aria-hidden="true"></i></a>
                 </div>
 
             </div>
@@ -179,6 +188,9 @@ $error = "";
             <a class="email" href="mailto:sellerproduction@sellerproduction.com">sellerproduction<span class="slash">@</span>sellerproduction.com</a>
             <br>
             <button id="contactBtn">GET IN TOUCH</button>
+            <div id="error">
+                <?php echo $error.$successMessage; ?>
+            </div>
 
             <!-- MODAL -->
 
@@ -205,10 +217,12 @@ $error = "";
                                 <small class="text-muted">I'll never share your email with anyone else.</small>
                             </fieldset>
                             <div class="clearfix"></div>
-                            <div id="error"><?php echo $error.$successMessage; ?></div> 
+                            <div id="error">
+                                <?php echo $error.$successMessage; ?>
+                            </div>
                             <div class="danger">
-                            <strong>Oh no!</strong> Check your email adress and try submitting again.
-                        </div>
+                                <strong>Oh no!</strong> Check your email adress and try submitting again.
+                            </div>
 
                             <fieldset class="comment">
                                 <label for="comment">Comment</label>

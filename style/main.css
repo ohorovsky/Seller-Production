@@ -13,6 +13,18 @@ body {
     padding: 0;
     font-family: 'Open Sans', sans-serif;
     overflow-x: hidden;
+    
+}
+
+body{
+    opacity:0;
+    
+    transition: 0.5s;
+}
+
+.fade-in-up{
+    opacity:1;
+    
 }
 
 * {
@@ -165,8 +177,21 @@ nav {
     vertical-align: middle;
 }
 
+.menu .footerIcons{
+    position: absolute;
+    bottom:10px;
+    left:50%;
+    transform: translate(-50%);
+}
+
+.menu .footerIcons a{
+    font-size:45px;
+    margin:15px;
+}
+
 .menuItems h1 {
     margin-top: 50px;
+    
 }
 
 .menuItems a {
@@ -263,7 +288,7 @@ nav {
     top: 70px !important;
 }
 
-.audio-icons {
+.audio-icons, .buy-icons {
     opacity: 0;
     transform: scale(0);
     transition: 0.5s;
@@ -274,38 +299,38 @@ nav {
     transform: scale(1);
 }
 
-.audio-icons img {
+.audio-icons img, .buy-icons img {
     width: 30px;
 }
 
-.audio-icons a {
+.audio-icons a, .buy-icons a {
     position: absolute;
     display: block;
     width: 30px;
     height: 30px;
 }
 
-.audio-icons .icon1 {
+.audio-icons .icon1, .buy-icons .icon1 {
     top: 0px;
     left: 30px;
 }
 
-.audio-icons .icon2 {
+.audio-icons .icon2, .buy-icons .icon2 {
     top: 0px;
     right: 30px;
 }
 
-.audio-icons .icon3 {
+.audio-icons .icon3, .buy-icons .icon3 {
     bottom: 30px;
     right: 30px;
 }
 
-.audio-icons .icon4 {
+.audio-icons .icon4, .buy-icons .icon4 {
     bottom: 30px;
     left: 30px;
 }
 
-.audio-icons .iconBack {
+.audio-icons .iconBack, .buy-icons .iconBack {
     color: #009be3;
     padding: 0;
     top: 0;
@@ -462,7 +487,7 @@ footer {
     transition: 0.25s;
 }
 
-#footer a:hover {
+#footer a:hover, .footerIcons a:hover {
     color: rgba(200, 200, 200, 1);
 }
 
@@ -643,10 +668,31 @@ footer {
     padding: 2px 16px;
 }
 
-/* EMAIL VALIDATION MESSAGE */
+/* FORM VALIDATION MESSAGE */
 
 .danger{
     display: none;
+    background-color: #F67975;
+    width:auto;
+    border-radius: 5px;
+    margin:20px auto;
+    padding:10px;
+}
+
+.alert-danger{
+    background-color: #F67975;
+    border-radius: 5px;
+    display: inline-block;
+    margin:20px auto;
+    padding:10px;
+}
+.alert-success{
+    background-color: #BBF5BB;
+    border-radius: 5px;
+    color:#176029;
+    display: inline-block;
+    margin:20px auto;
+    padding:10px;
 }
 
 
@@ -702,7 +748,7 @@ footer {
 
 /***********************************font-size: 20px****************************************/
 
-@media only screen and (min-width: 961px) {
+@media only screen and (min-width: 1200px) {
     nav {
         display: block;
         position: fixed;
@@ -914,6 +960,18 @@ only screen and (min-resolution: 192dpi) {
     }
     #feature iframe {
         margin: 170px auto 100px auto;
+    }
+    .play {
+        left: 18.5%;
+    }
+    .buy {
+        right: 18.5%;
+    }
+    .bio {
+        width: 480px;
+    }
+    .studio {
+        width: 480px;
     }
 }
 
