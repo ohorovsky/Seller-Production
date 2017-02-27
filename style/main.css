@@ -21,11 +21,26 @@ body {
     padding: 0;
 }
 
+@font-face {
+    font-family: "digital";
+    src: url("../fonts/digital-7.ttf") format("truetype");
+}
+
 .container {
     max-width: 80%;
     margin: 0 auto;
 }
 
+.clearfix{
+    clear: both;
+}
+
+.pull-left{
+    float:left;
+}
+.pull-right{
+    float:right;
+}
 
 /*==========================================================================*/
 
@@ -43,7 +58,6 @@ header {
     background-image: url("../img/mix.jpg");
     background-position: 50% 50%;
     background-size: cover;
-  
     z-index: 1;
 }
 
@@ -61,7 +75,7 @@ header {
     position: relative;
     text-align: center;
     color: #fff;
-    top:30%;
+    top: 30%;
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 5px;
@@ -72,7 +86,8 @@ header {
     width: 100px;
     display: block;
     margin: 0 auto;
-    top: 0px;
+    top: 10px;
+    left: 25px;
 }
 
 
@@ -93,7 +108,7 @@ nav {
     width: 50px;
     height: 40px;
     display: block;
-    z-index: 100;
+    z-index: 10000;
 }
 
 .icon-line {
@@ -133,7 +148,7 @@ nav {
     display: table;
     opacity: 0;
     right: -100%;
-    z-index: 99;
+    z-index: 1000;
     color: rgba(240, 240, 240, 1);
     text-align: center;
     transition: 0.8s ease;
@@ -350,7 +365,6 @@ nav {
 }
 
 .studio {
-    
     position: relative;
     background-image: url("../img/studio.jpg");
     background-position: center;
@@ -457,6 +471,195 @@ footer {
 }
 
 
+/* MODAL */
+
+#contactBtn {
+    width: 200px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 1px solid #009be3;
+    letter-spacing: 5px;
+    font-size: 10px;
+    transition: 0.25s;
+}
+
+#contactBtn:hover {
+    background-color: #009be3;
+}
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 10000;
+    /* Sit on top */
+    padding-top: 50px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+
+/* Modal Content */
+
+.modal-content {
+    position: relative;
+    background-color: rgba(40, 40, 40, 1);
+    margin: 0 auto;
+    padding: 0;
+    width: 90%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+.modal-content fieldset {
+    width: 300px;
+    margin: 20px auto;
+    color: white;
+    border: none;
+}
+
+.modal-content textarea {
+    width: 100%;
+    font-size: 18px;
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.modal-content fieldset input {
+    width: 100%;
+    margin: 20px 0;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.modal-content fieldset label {
+    float: left;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.modal-content fieldset small {
+    font-size: 10px;
+}
+
+#submitButton {
+    float: left;
+    width: 35%;
+    padding: 10px 20px;
+    background-color: #009be3;
+    color: white;
+    border: none;
+    margin-bottom: 20px;
+}
+
+#submitButton:hover {
+    background-color: #286090;
+}
+
+#resetButton {
+    float: right;
+    width: 35%;
+    padding: 10px 20px;
+    background-color: #D44950;
+    color: white;
+    border: none;
+    margin-bottom: 20px;
+}
+
+#resetButton:hover {
+    background-color: #C9302C;
+}
+
+
+/* Add Animation */
+
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+
+/* The Close Button */
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #009be3;
+    color: white;
+    font-size: 25px;
+}
+
+.modal-body {
+    padding: 2px 16px;
+}
+
+/* EMAIL VALIDATION MESSAGE */
+
+.danger{
+    display: none;
+}
+
+
+/* COUNTER */
+
+#counter {
+    font-family: 'digital', 'sans-serif';
+    margin-bottom: 5px;
+    color: white;
+    font-size: 12px;
+}
+
+
 /*********************************************************************************************/
 
 
@@ -466,8 +669,8 @@ footer {
 /*********************************font-size: 18px*********************************************/
 
 @media screen and (min-width:480px) {
-    .header-overlay h1{
-        left:50%;
+    .header-overlay h1 {
+        left: 50%;
         transform: translate(-50%);
     }
     .play {
@@ -476,6 +679,18 @@ footer {
     .buy {
         right: 20%;
     }
+    /* MODAL */
+    .modal-content fieldset {
+        width: 40%;
+    }
+    
+    .comment{
+        width:100% !important;
+    }
+    
+    
+    
+    
 }
 
 
@@ -514,10 +729,10 @@ footer {
     }
     .navbar-logo {
         position: fixed;
-        top: 0;
+        top: 20px;
         left: 50%;
         transform: translate(-50%);
-        height: 150px;
+        height: 110px;
         width: auto;
         display: block;
         margin: 0 auto;
@@ -573,7 +788,7 @@ footer {
         position: absolute;
         width: 100%;
         text-align: center;
-        top:300px;
+        top: 300px;
         font-size: 40px;
         color: #fff;
     }
@@ -616,6 +831,12 @@ footer {
         max-width: 60%;
         margin: 100px auto;
     }
+    
+    /* MODAL */
+    .modal-content {
+        width:70%;
+    }
+    
 }
 
 
@@ -658,6 +879,18 @@ footer {
     }
     .studio {
         width: 480px;
+    }
+    
+    /* MODAL */
+    .modal-content {
+        width:50%;
+    }
+    .modal-content fieldset {
+        width: 30%;
+    }
+    
+    .comment{
+        width:100% !important;
     }
 }
 
