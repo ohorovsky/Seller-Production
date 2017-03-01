@@ -23,7 +23,7 @@ $error = "";
             
         } else{
             
-            $emailTo = "o.horovsky@gmail.com";
+            $emailTo = "sellerproduction@sellerproduction.com";
             $name = $_POST['name'];
             $comment = $_POST['comment'];
             $headers = "From: ".$_POST['email'];
@@ -48,9 +48,10 @@ $error = "";
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="keywords" content="">
+        <title>Seller Media Production</title>
+        <meta name="description" content="Production, Recording, Label, Events">
+        <meta name="keywords" content="peter, seller, media, sellers, durik, music, funk, g-funk, production, recording, label, events, scratch,invizzible,Kosice,slovakia,LA,west,coast,DJ,D.J.,KIP, on-dro,horovsky,yamaha,technics,studio, protools, promotions, songwriters, arrange">
+        <link rel="icon" href="img/logo.png">
         <link href="style/jquery-ui.css">
         <link rel="stylesheet" type="text/css" href="style/main.css">
         <script src="js/prefixfree.min.js"></script>
@@ -83,7 +84,7 @@ $error = "";
 
         <div class="menu">
             <div class="menuItems">
-               <img class="mobile-logo" src="img/logo.png">
+                <img class="mobile-logo" src="img/logo.png">
                 <a href="#header"><h1>HOME</h1></a>
                 <a href="#main"><h1>BIO</h1></a>
                 <a href="#music"><h1>MUSIC</h1></a>
@@ -155,7 +156,7 @@ $error = "";
                             <h4>AUDIO INTERFACE: </h4>
                             <p>ADAT BRIDGE 16 channel adat interface / AVID HD OMNI / Steinberg MR 816x / Word Clock Sample Rate Generator: SyncGen / DIGI 002 Avid / M-Audio Pro Fire 610</p>
                             <h4>SOFTWARE: </h4>
-                            <p>Pro TOOLS 12.7 Native / Pro TOOLS 12.7 HD + plug ins AAX / Waves / UAE / Pro TOOLS 12.6.1 Native / Cubase 8.5.20 / VST Plugins </p>
+                            <p>Pro TOOLS 12.7 Native / Pro TOOLS 12.7 HD + plug ins AAX / Waves / UAE / Cubase 8.5.20 / VST Plugins </p>
                             <h4>SYNTHETIZER MODUL's & KEYBOARD's:</h4>
                             <p>ProTeus/1 XR / Alesis D4 / Kurzweil - Micro Piano / KORG Trinity Plus / KORG 01/W fd / KORG TR / ProKeys Sono 88</p>
 
@@ -227,7 +228,7 @@ $error = "";
                             <fieldset class="comment">
                                 <label for="comment">Comment</label>
                                 <br>
-                                <textarea class="form-control" id="comment" name="comment" rows="5"></textarea>
+                                <textarea class="form-control" id="comment" name="comment" rows="3"></textarea>
                             </fieldset>
                             <br>
                             <fieldset>

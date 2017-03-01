@@ -51,6 +51,7 @@ $(document).ready(function () {
     var delta = 5;
     var navbarHeight = $("nav").outerHeight();
 
+    //MENU BEHAVIOR 
 
     $('.menuBtn').click(function () {
         $('.menu').toggleClass("showMenu");
@@ -60,6 +61,9 @@ $(document).ready(function () {
         $('.menu').toggleClass("showMenu");
         $('.menuBtn').toggleClass("open");
     })
+    
+    //SMOOTH SCROLL TO ANCHOR TAG
+    
     $("a").on('click', function (event) {
         if (this.hash !== "") {
             event.preventDefault();
@@ -72,6 +76,9 @@ $(document).ready(function () {
             });
         }
     })
+    
+    // PLAY AND BUY BUTTONS ANIMATIONS
+    
     $('.play').click(function () {
         $('.play .up').toggleClass("switchUp");
         $('.play .down').toggleClass("switchDown");
@@ -86,6 +93,9 @@ $(document).ready(function () {
         $('.buy-icons').toggleClass("expand");
     })
 
+    
+    //HEADING SPLIT
+    
     $(window).scroll(function () {
         var wScroll = $(this).scrollTop();
         if (wScroll / 400 <= 1) {
